@@ -1,13 +1,13 @@
-package com.example.kch.dockertest;
+package com.ll.exam.app20220916;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DockerTestApplicationTests {
+class App202209162ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }

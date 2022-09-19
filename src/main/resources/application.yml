@@ -1,19 +1,5 @@
 spring:
+  profiles:
+    active: dev
   datasource:
-    driver: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/docker?serverTimezone=UTC
-#    username: root
-#    password: rlaclgns5628
-    url: jdbc:mysql://rdstest.crlgwjovnbdc.ap-northeast-2.rds.amazonaws.com:3306/sys?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: admin
-    password: rlaclgns5628
-
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-        format_sql: true
-    generate-ddl: true
+    driver-class-name: org.mariadb.jdbc.Driver

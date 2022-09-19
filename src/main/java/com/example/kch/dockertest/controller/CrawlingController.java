@@ -1,6 +1,7 @@
 package com.example.kch.dockertest.controller;
 
 import com.example.kch.dockertest.service.CrawlingService;
+import com.example.kch.dockertest.service.CrawlingService2;
 import lombok.RequiredArgsConstructor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,9 +20,14 @@ import java.util.List;
 public class CrawlingController {
 
     private final CrawlingService crawlingService;
+    private final CrawlingService2 crawlingService2;
 
     @GetMapping("/crawling")
     public ResponseEntity<String> crawlingTest(){
         return ResponseEntity.status(HttpStatus.OK).body(crawlingService.crawlingTest("https://www.musinsa.com/app/goods/1885631"));
+    }
+    @GetMapping("/crawling2")
+    public ResponseEntity<String> crawlingTest2(){
+        return ResponseEntity.status(HttpStatus.OK).body(crawlingService2.crawlingTest("https://www.musinsa.com/app/goods/1885631"));
     }
 }

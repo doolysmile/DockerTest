@@ -14,8 +14,8 @@ public class CrawlingService {
 
     private final String DRIVER_ID = "webdriver.chrome.driver";
     //크롬 드라이버 경로 설정
-    private final String DRIVER_PATH = "./src/main/resources/chromedriver.exe";
-
+//    private final String DRIVER_PATH = "./src/main/resources/chromedriver.exe";
+    private final String DRIVER_PATH = "/server/chromedriver";
     public String crawlingTest(String url){
         System.setProperty(DRIVER_ID, DRIVER_PATH);
         ChromeOptions options = new ChromeOptions();
@@ -45,8 +45,4 @@ public class CrawlingService {
         return review;
     }
 
-//    public static void main(String[] args) {
-//        CrawlingService crawlingService = new CrawlingService();
-//        System.out.println(crawlingService.crawlingTest("https://www.musinsa.com/app/goods/1885631") );
-//    }
 }
